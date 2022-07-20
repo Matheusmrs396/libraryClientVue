@@ -17,6 +17,11 @@ export default {
         image: "",
         category: {},
       },
+      currentCart: {
+        id: "",
+        productId:"",
+        amount:"" 
+      },
       editing: false,
     };
   },
@@ -32,10 +37,22 @@ export default {
       "saveProduct",
       "deleteProduct",
     ]),
+    ...mapActions(useCartStore, [ "getAllCarts","addCart"]),
     ...mapActions(useCategoryStore, ["getAllCategories"]),
     async save() {
       try {
         const msg = await this.saveProduct(this.currentProduct);
+        alert(msg);
+        this.editing = false;
+        this.currentProduct = {};
+      } catch (e) {
+        alert("Ooops! Algo de errado!");
+      }
+    },
+    async saveCart() {
+      try {
+        console.log(this.currentCart)
+        const msg = await this.addCart(this.currentCart);
         alert(msg);
         this.editing = false;
         this.currentProduct = {};
@@ -130,7 +147,7 @@ export default {
 
       <q-card-actions>
         <q-btn
-          @click="addCart"
+          @click="saveCart(product.id)"
           color="blue"
           icon="add_shopping_cart"
           label="Adicionar ao carrinho"

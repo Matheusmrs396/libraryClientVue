@@ -21,9 +21,11 @@ export const useCartStore = defineStore({
         return Promise.reject("Erro desconhecido ao consultar 'Catgory'");
       }
     },
-    async addCart(cart) {
+    async addCart(product) {
       try {
-        const { data } = await axios.post("http://localhost:4000/carts", cart);
+        alert("caiu no add");
+        console.log(product)
+        const { data } = await axios.post("http://localhost:4000/carts", product);
         this.carts.push(data);
         return Promise.resolve("Livro adicionado ao carrinho");
       } catch (e) {

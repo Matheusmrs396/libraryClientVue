@@ -63,7 +63,7 @@ const columns = [
     required: true,
     label: "Livros",
     align: "left",
-    field: (row) => row.name,
+    field: (row) => row.category.description,
     format: (val) => `${val}`,
     sortable: true,
   },
@@ -71,7 +71,7 @@ const columns = [
     name: "Categoria",
     align: "center",
     label: "Categoria",
-    field: (row) => row.category.description,
+    field: (row) => row.name,
     sortable: true,
   },
   {

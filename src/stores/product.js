@@ -23,7 +23,6 @@ export const useProductStore = defineStore({
     },
     async addProduct(product) {
       try {
-        console.log(product)
         const { data } = await axios.post(
           "http://localhost:4000/products",
           product

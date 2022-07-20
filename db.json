@@ -102,10 +102,14 @@
   ],
   "carts": [
     {
-      "id":1, 
+      "id": 1,
       "productId": 7,
       "amount": 1
+    },
+    {
+      "id": 2,
+      "productId": "",
+      "amount": ""
     }
   ]
-  
 }
