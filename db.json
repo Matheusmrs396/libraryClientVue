@@ -25,16 +25,8 @@
       "image": "https://cdn.quasar.dev/img/parallax1.jpg",
       "price": "R$ 150,00",
       "publisherId": 1,
-      "authorId": 2,
-      "author": {
-        "id": 1,
-        "name": "JK Rowlling "
-      },
-      "publisher": {
-        "id": 1,
-        "name": "Companhia das letras 2",
-        "link": "https://www.companhiadasletras.com.br/"
-      }
+      "amount": 6,
+      "authorId": 2
     },
     {
       "id": 6,
@@ -43,6 +35,7 @@
       "publisherId": 1,
       "authorId": 1,
       "price": "R$ 150,50",
+      "amount": 5,
       "image": "https://cdn.quasar.dev/img/parallax1.jpg"
     },
     {
@@ -50,6 +43,7 @@
       "id": 7,
       "publisherId": 1,
       "authorId": 1,
+      "amount": 11,
       "name": "dvdsvsdvsdvsd",
       "image": "https://cdn.quasar.dev/img/parallax1.jpg",
       "price": "250,36"
@@ -62,15 +56,15 @@
       "name": "asbcajhcbajhc",
       "image": "https://cdn.quasar.dev/img/parallax1.jpg",
       "price": 300.36,
-      "category": {}
+      "amount": 7
     },
     {
       "categoryId": 1,
       "id": 9,
       "name": "dvsdvsdvsdv",
-      "image": "\thttps://cdn.quasar.dev/img/parallax1.jpg",
+      "image": "https://cdn.quasar.dev/img/parallax1.jpg",
       "price": "230,00",
-      "category": {},
+      "amount": 10,
       "authorId": 3,
       "publisherId": 2
     }
@@ -105,5 +99,13 @@
       "id": 3,
       "link": "https://www.editoraarqueiro.com.br/"
     }
+  ],
+  "carts": [
+    {
+      "id":1, 
+      "productId": 7,
+      "amount": 1
+    }
   ]
+  
 }
