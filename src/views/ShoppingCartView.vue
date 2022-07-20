@@ -37,7 +37,7 @@ export default {
     ...mapActions(useCategoryStore, ["getAllCategories"]),
     ...mapActions(useAuthorStore, ["getAllAuthors"]),
     ...mapActions(usePublisherStore, ["getAllPublishers"]),
-    ...mapActions(usePublisherStore, ["getAllCarts"]),
+    ...mapActions(useCartStore, ["getAllCarts"]),
   },
   async mounted() {
     try {
@@ -45,6 +45,7 @@ export default {
       await this.getAllProducts();
       await this.getAllAuthors();
       await this.getAllPublishers();
+      await this.getAllCarts();
     } catch (e) {
       alert(e);
     }
@@ -61,9 +62,9 @@ const columns = [
   {
     name: "name",
     required: true,
-    label: "Livros",
+    label: "Livro",
     align: "left",
-    field: (row) => row.category.description,
+    field: (row) => row.product.author.name,
     format: (val) => `${val}`,
     sortable: true,
   },
@@ -71,17 +72,17 @@ const columns = [
     name: "Categoria",
     align: "center",
     label: "Categoria",
-    field: (row) => row.name,
+    field: (row) => row.productId,
     sortable: true,
   },
   {
     name: "Autor",
-    label: "Autor",
-    field: (row) => row.author.name,
+    align: "center",
+    label: "Categoria",
+    field: (row) => row.product.category,
     sortable: true,
   },
-  { name: "Editora", label: "Editora", field: (row) => row.publisher.name },
-  { name: "Preço", label: "Preço (R$)", field: "price" },
+
 ];
 </script>
 
