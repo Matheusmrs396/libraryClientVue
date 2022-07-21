@@ -105,6 +105,11 @@
       "id": 1,
       "productId": 7,
       "amount": 1
+    },
+    {
+      "productId": 3,
+      "amount": 1,
+      "id": 2
     }
   ]
 }

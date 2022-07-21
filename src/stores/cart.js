@@ -25,7 +25,7 @@ export const useCartStore = defineStore({
       try {
         alert("caiu no add");
         console.log(product)
-        const { data } = await axios.post("http://localhost:4000/carts", product);
+        const { data } = await axios.post("http://localhost:4000/carts",{productId :product, amount:1} );
         this.carts.push(data);
         return Promise.resolve("Livro adicionado ao carrinho");
       } catch (e) {

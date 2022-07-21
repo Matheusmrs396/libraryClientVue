@@ -15,29 +15,9 @@ const router = createRouter({
       component: () => import("../views/ProductView.vue"),
     },
     {
-      path: "/categorias",
-      name: "category",
-      component: () => import("../views/CategoryView.vue"),
-    },
-    {
       path: "/carrinho",
       name: "shoppingCart",
       component: () => import("../views/ShoppingCartView.vue"),
-    },
-    {
-      path: "/autores",
-      name: "author",
-      component: () => import("../views/AuthorView.vue"),
-    },
-    {
-      path: "/editoras",
-      name: "publisher",
-      component: () => import("../views/PublisherView.vue"),
-    },
-    {
-      path: "/cadastroLivro",
-      name: "bookRegistration",
-      component: () => import("../views/BookRegistrationView.vue"),
     }
   ],
 });

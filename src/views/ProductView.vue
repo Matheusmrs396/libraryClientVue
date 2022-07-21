@@ -49,10 +49,10 @@ export default {
         alert("Ooops! Algo de errado!");
       }
     },
-    async saveCart() {
+    async saveCart(product) {
       try {
         console.log(this.currentCart)
-        const msg = await this.addCart(this.currentCart);
+        const msg = await this.addCart(product);
         alert(msg);
         this.editing = false;
         this.currentProduct = {};
@@ -96,7 +96,7 @@ export default {
   <div class="main">
     <q-card
       class="my-card justify"
-      style="width: 30vw; height: 35vh; margin: 1%"
+      style="width: 30vw; height: 40vh; margin: 1%"
       v-for="product of products"
       :key="product.id"
     >

@@ -64,7 +64,7 @@ const columns = [
     required: true,
     label: "Livro",
     align: "left",
-    field: (row) => row.product.author.name,
+    field: (row) => row.product.name,
     format: (val) => `${val}`,
     sortable: true,
   },
